@@ -1,0 +1,25 @@
+<div class="realestate_wrapper"><a class="realestate-link" href="detail.html?id=<?= $this->id ?>">
+	<div class="realestate <?php echo $this->class; ?> block"<?php echo $this->cssID; ?>
+	<?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+	<?php if ($this->elements['photo']): ?>
+		<div class="left">
+			<!-- teaserstart --><div class="image_container">
+				<img src="<?php echo $this->elements['photo']; ?>" width="150" />
+		</div><!-- teaserend --></div>
+		<?php endif; ?>
+ 
+		<div class="right">
+			<div class="realestate-headline"><h3><?php echo $this->elements['headline']; ?></h3></div>
+			<div class="realestate-location">
+				<?php if ($this->elements['location']): ?><i class="fas fa-map-marker-alt"></i> <?php echo $this->elements['location']; ?><?php endif; ?><br>
+				<?php if ($this->elements['zip'] && !$this->elements['location']): ?><i class="fas fa-map-marker-alt"></i> <?php endif; ?><?php if ($this->elements['zip']): echo $this->elements['zip']; endif; ?> <?php if ($this->elements['city']): echo $this->elements['city']; endif; ?>
+			</div>
+			<div class="realestate-short-info">
+				<div class="realestate-hardfact"><?php if ($this->elements['price']): ?><?php echo $this->labels['price']; ?>:<br><span><strong><?php echo $this->elements['price']; ?></strong></span><?php endif; ?></div>
+				<div class="realestate-hardfact"><?php if ($this->elements['size']): ?><?php echo $this->labels['size']; ?>:<br><span><?php echo $this->elements['size']; ?> m²</span><?php endif; ?></div>
+				<div class="realestate-hardfact"><?php if ($this->elements['rooms']): ?><?php echo $this->labels['rooms']; ?>:<br><span><?php echo $this->elements['rooms'];?></span><?php endif; ?></div>
+			</div>
+		</div>
+	</div>
+</a>
+</div>

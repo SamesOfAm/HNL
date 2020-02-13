@@ -1,0 +1,25 @@
+@import "variables";
+
+.ce_gallery ul {
+  width: $content-width;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  li {
+    width: 150px;
+    flex: 1 0 25%;
+    margin: 2%;
+    height: 16vw;
+  }
+}
+
+@media screen and (max-width: $mobile-threshold) {
+  .ce_gallery ul li {
+    width: 100%;
+    flex: none;
+    margin: 0 0 150px 0;
+    height: 45vw;
+  }
+}

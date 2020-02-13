@@ -1,0 +1,233 @@
+@import 'variables';
+
+#aktuelle-angebote {
+  min-height: 438px;
+}
+
+.offer-buttons {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.offer-button {
+  float: left;
+  width: 40%;
+  margin: 5%;
+  text-align: center;
+  &:hover  p {
+    color: $primary-color;
+  }
+  &:hover .button-text-wrapper {
+    border-bottom-width: 10px;
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    transition: color 200ms;
+  }
+  img {
+    height: 253px;
+  }
+}
+
+.realestate-link:hover .realestate {
+  box-shadow: 0 0 10px gray;
+}
+
+.realestate-link:hover h3 {
+  color: $primary-color;
+}
+
+.realestate_wrapper {
+  width: $content-width;
+  max-width: 1300px;
+  margin: 20px auto;
+  a.realestate-link:hover {
+    color: black;
+  }
+}
+
+.realestate {
+  height: 250px;
+  box-shadow: 0 0 20px #cbcbcb;
+  border-radius: 7px;
+  transition: all 350ms;
+  .image_container {
+    height: 100%;
+    img {
+      width: 380px;
+    }
+  }
+  h3 {
+    transition: color 200ms;
+  }
+}
+
+.left, .right {
+  float: left;
+  position: relative;
+  height: 100%;
+}
+
+.right {
+  width: 50%;
+}
+
+.realestate-headline {
+  margin-left: 20px;
+}
+
+.realestate-location {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.realestate-short-info {
+  position: absolute;
+  bottom: 5px;
+
+}
+
+.realestate-hardfact {
+  float: left;
+  &:not(:last-child) {
+    margin-right: 70px;
+  }
+  &:first-child {
+    margin-left: 20px;
+  }
+  > span {
+    font-size: 22px;
+  }
+}
+
+.photos {
+  width: 85%;
+  max-width: 1150px;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.realestate-text {
+  width: $content-width;
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+.info > section {
+  margin: 50px 0;
+  > div > span:first-child {
+    font-size: 25px;
+  }
+}
+
+.numbers {
+  height: 60px;
+  > div {
+    float: left;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.description {
+  clear: both;
+  line-height: 1.8em;
+}
+
+.plan-pdf {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  min-height: 70vh;
+}
+
+.button-paragraph {
+  margin-bottom: 40px;
+}
+
+a.button-immo {
+  padding: 10px;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 4px;
+  transition: all 200ms;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  &:hover {
+    background-color: #da616a;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .realestate .image_container img {
+    width: 333px;
+  }
+  .right {
+    width: 54%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #aktuelle-angebote {
+    min-height: 574px;
+  }
+  .offer-button {
+    float: none;
+    width: 60%;
+    height: 200px;
+    margin: 50px auto;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .realestate {
+    height: auto;
+  }
+  .left, .right {
+    float: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .realestate-headline {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  #main .realestate .image_container {
+    height: auto;
+  }
+  .realestate .image_container img {
+    width: auto;
+    height: 250px;
+  }
+  .realestate-location {
+    margin-top: 23px;
+  }
+  .realestate-short-info {
+    position: initial;
+    margin-top: 30px;
+  }
+  .realestate-hardfact {
+    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  .photos {
+    height: initial;
+  }
+  .numbers > div:not(:last-child) {
+    margin-right: 25px;
+  }
+  .plan-pdf {
+    width: 100%;
+  }
+}

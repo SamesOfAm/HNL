@@ -1,0 +1,214 @@
+@import 'variables';
+
+#main {
+  margin-top: -7.4%;
+  margin-bottom: -22px;
+  padding-bottom: 100px;
+  background-image: url('../../assets/images/general/marble-background.jpg');
+  background-size: 270%;
+  background-position: -1330px -1100px;
+  z-index: 0;
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+  .ce_text {
+    width: $content-width;
+    margin: 0 auto;
+    max-width: $content-max-width;
+    h2 {
+      text-transform: none;
+    }
+    ul {
+      list-style: none;
+      li:before {
+        content: '\00bb ';
+        width: 1.3em;
+        margin-left: -1.3em;
+        display: inline-block;
+        color: $primary-color;
+      }
+    }
+  }
+  .ce_image {
+    border-bottom: 4px solid $primary-color;
+    margin-bottom: 80px;
+  }
+  .image_container {
+    height: 400px;
+  }
+  .ce_accordion {
+    width: $content-width;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    & ~ .ce_accordion {
+      margin-top: 0;
+      border-top: none;
+    }
+    .ce_text {
+      width: 100%;
+    }
+  }
+  .accordion-end {
+    margin-bottom: 50px;
+  }
+}
+.buttons {
+  width: $content-width;
+  height: 340px;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  font-size: 14px;
+}
+.button {
+  width: 29%;
+  margin: 2%;
+  float: left;
+  text-align: center;
+  padding-bottom: 17px;
+}
+.button:hover .button-text-wrapper {
+  border-bottom-width: 10px;
+  font-weight: bold;
+}
+.button-icon {
+  height: 170px;
+  display: block;
+  margin: 40px auto;
+}
+.button-text-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 13px;
+  text-align: center;
+  transition: border-bottom-width 150ms;
+}
+.accordion-arrow-mobile {
+  display: block;
+}
+
+.toggler {
+  cursor: pointer;
+  position: relative;
+  padding: 15px 0;
+  transition: color,padding-left 350ms;
+  &:hover {
+    color: $primary-color;
+    padding-left: 20px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:after {
+    content: '\00bb ';
+    position: absolute;
+    right: 15%;
+    top: 0;
+    font-size: 35px;
+    color: $primary-color;
+    -webkit-transform: rotate(+90deg);
+    transition: all 350ms;
+  }
+  &:before {
+    content: 'A ';
+    color: transparent;
+    display: none;
+    font-size: 18px;
+  }
+  &.active {
+    font-style: italic;
+    font-weight: bold;
+    color: $primary-color;
+    &:after {
+      font-style: initial;
+      font-weight: normal;
+      content: '\00bb';
+      position: absolute;
+      right: 16%;
+      top: 0;
+      font-size: 35px;
+      color: $primary-color;
+      -webkit-transform: rotate(-90deg);
+    }
+  }
+  &:hover:after {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  #main .mod_article.first {
+    padding-top: 125px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  #main .mod_article.first {
+    padding-top: 170px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #main .image_container {
+      height: 244px;
+  }
+  #main .mod_article.first {
+    padding-top: 80px;
+  }
+}
+
+
+@media screen and (max-width: $mobile-threshold) {
+  #main {
+    margin-top: 0;
+    background-position: initial;
+  }
+  .buttons {
+    margin-bottom: 25px;
+  }
+  .button-icon {
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  #main > div > div > h2 {
+    width: $content-width;
+    margin: 0 auto;
+    text-align: left;
+  }
+  #main .ce_text h2 {
+    text-align: left;
+    width: 100%;
+  }
+  #main .image_container {
+    height: 140px;
+  }
+
+
+  .buttons {
+    width: 310px;
+    height: 760px;
+    margin-bottom: 0;
+  }
+  .button {
+    width: 100%;
+    font-size: 18px;
+    img {
+      height: 100px;
+    }
+  }
+  .toggler:before {
+    display: block;
+  }
+  .toggler:after {
+    right: 50%;
+  }
+  .toggler.active:after {
+    right: 52%;
+  }
+}

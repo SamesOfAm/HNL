@@ -1,0 +1,44 @@
+@import "variables";
+
+@font-face {
+  font-family: 'droid_serifregular';
+  src: url('../../assets/fonts/DroidSerif-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body {
+  font-family: 'droid_serifregular', Arial, serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  transition: color 200ms;
+  &:visited {
+    color: black;
+  }
+  &:focus {
+    color: black;
+  }
+  &:hover {
+    color: $primary-color;
+  }
+}
+.ce_image {
+  figure {
+    margin-bottom: -5px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@import 'navigation';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'realestate';
+@import 'form';
+@import 'gallery';

@@ -1,0 +1,146 @@
+@import 'variables';
+
+#footer {
+  position: relative;
+  height: 480px;
+  background-image: url('../../assets/images/general/footer-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  box-shadow: 0 -20px 25px -20px #c5c5c5;
+}
+#footer-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.footer-element {
+  float: left;
+  margin: 2%;
+}
+.footer-logo {
+  width: 36%;
+}
+.footer-contact {
+  width: 22%;
+  min-width: 240px;
+}
+.footer-contact-section {
+  padding: 14px 0;
+  height: 45px;
+  border-top: 1px solid $primary-color;
+  &:first-child {
+    border-top: none;
+  }
+  & > div {
+    float: left;
+  }
+}
+.footer-contact-left {
+  float: left;
+  width: 40%;
+  font-style: italic;
+}
+.footer-hours > span:first-child {
+  font-style: italic;
+}
+.footer-links {
+  width: 15%;
+  min-width: 140px;
+  a:first-child > .footer-link {
+    border-top: none;
+  }
+}
+.footer-link {
+  position: relative;
+  height: 2em;
+  margin-left: -0.4em;
+  padding-top: 12px;
+  border-top: 1px solid $primary-color;
+  &:before {
+    position: absolute;
+    left: -30px;
+    opacity: 0;
+    display: inline-block;
+    content: '\00bb';
+    color: $primary-color;
+    transition: all 350ms;
+  }
+  &:hover:before {
+    opacity: 1;
+    left: -15px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #footer {
+    height: 555px;
+  }
+  #footer-wrapper {
+    width: 85%;
+  }
+  .footer-logo {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 70%;
+      padding-bottom: 20px;
+      border-bottom: 4px solid $primary-color;
+    }
+  }
+  .footer-contact {
+    width: 46%;
+    margin-bottom: 25px;
+  }
+  .footer-contact-section {
+    width: 240px;
+    margin: 0 auto;
+  }
+  .footer-links {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: $mobile-threshold) {
+  .footer-logo {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: $smartphone-threshold) {
+  #footer {
+    height: 800px;
+  }
+  .change-order {
+    display: table;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .footer-contact {
+    float: none;
+    display: table-footer-group;
+    width: 90%;
+  }
+  .footer-contact-section {
+    width: 100%;
+  }
+  .footer-links {
+    float: none;
+    display: table-header-group;
+    margin-left: 0;
+    width: 100%;
+  }
+  .footer-link {
+    margin-left: 0;
+  }
+  .footer-element a:last-child div {
+    margin-bottom: 50px;
+  }
+  .footer-contact-section:nth-child(3){
+    border-top:none;
+  }
+}

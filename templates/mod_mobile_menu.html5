@@ -1,0 +1,38 @@
+
+<?php $this->extend('block_unsearchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<div id="mobile-menu-<?= $this->id; ?>-trigger" class="mobile_menu_trigger">
+    <?= $this->trigger; ?>
+</div>
+
+<div id="mobile-menu-<?= $this->id; ?>" class="mobile_menu<?php if ($this->noShadow): ?> no_shadow<?php endif; ?>">
+    <div class="inner">
+        <?= $this->html; ?>
+
+    </div>
+</div>
+
+<script>
+(function($) {
+    $('#mobile-menu-<?= $this->id; ?>').mobileMenu({
+        <?php if ($this->animation): ?>
+        'animation': true,
+        'animationSpeed': <?= $this->animationSpeed ?>,
+        <?php endif; ?>
+        'breakPoint': <?= $this->breakPoint ?>,
+        'offCanvas': <?= $this->offCanvas ? 'true' : 'false' ?>,
+        'overlay': <?= $this->overlay ? 'true' : 'false' ?>,
+        'disableNavigation': <?= $this->disableNavigation ? 'true' : 'false' ?>,
+        'parentTogglers': <?= $this->parentTogglers ? 'true' : 'false' ?>,
+        'closeOnLinkClick': <?= $this->closeOnLinkClick ? 'true' : 'false' ?>,
+        'keepInPlace': <?= $this->keepInPlace ? 'true' : 'false' ?>,
+        'position': '<?= $this->position ?>',
+        <?php if ($this->size): ?>'size': '<?= $this->size ?>',<?php endif; ?>
+        'trigger': $('#mobile-menu-<?= $this->id; ?>-trigger')
+    });
+})(jQuery);
+</script>
+
+<?php $this->endblock(); ?>

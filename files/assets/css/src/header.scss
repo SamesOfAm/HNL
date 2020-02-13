@@ -1,0 +1,52 @@
+@import 'variables';
+
+#header {
+  .mod_article {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: visible;
+  }
+  .image_container img {
+    width: 100%;
+  }
+  & h1 {
+    position: absolute;
+    bottom: 8%;
+    right: 27%;
+    text-align: right;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #444;
+  }
+}
+.main-teaser-mobile {
+  display: none;
+  border-bottom: 2px solid $primary-color;
+}
+
+@media screen and (max-width: 1150px){
+  #header h1 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: $mobile-threshold) {
+  .main-teaser {
+    display: none;
+  }
+
+  .main-teaser-mobile {
+    display: block;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .main-teaser-mobile {
+    height: auto;
+  }
+}
+
+
+
